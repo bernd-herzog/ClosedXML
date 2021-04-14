@@ -40,9 +40,11 @@ nuget:
 
 deploy:
   - provider: NuGet
+    server: https://int.nugettest.org/api/v2/package
     api_key:
       secure: KsK/blrJeju4zoEUWucBUBvN3uQ5tJSVpN8MqXG9O1GOgSyACkON4rP5kL1ylyO8
     skip_symbols: false
     artifact: /.*(\.|\.s)nupkg/
     on:
-      branch: nugetPublish
+      branch: GithubAppveyorNugetOrgSession1
+
